@@ -1,0 +1,8 @@
+name = input("Имя: ")
+grades = list(map(int, input("Оценки: ").split()))
+
+grades.append(int(input("Новая оценка: ")))
+
+print(name)
+print(grades)
+print("Средний балл:", sum(grades) / len(grades))
