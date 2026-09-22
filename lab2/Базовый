@@ -1,1 +1,7 @@
+minutes = int(input("Введите количество минут: "))
 
+hours = minutes // 60
+remaining_minutes = minutes % 60
+
+print("Полных часов:", hours)
+print("Оставшихся минут:", remaining_minutes)
