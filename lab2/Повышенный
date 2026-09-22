@@ -1,1 +1,19 @@
+x1 = float(input("Введите x1: "))
+y1 = float(input("Введите y1: "))
 
+x2 = float(input("Введите x2: "))
+y2 = float(input("Введите y2: "))
+
+x3 = float(input("Введите x3: "))
+y3 = float(input("Введите y3: "))
+
+side_ab = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+side_bc = ((x3 - x2) ** 2 + (y3 - y2) ** 2) ** 0.5
+side_ca = ((x1 - x3) ** 2 + (y1 - y3) ** 2) ** 0.5
+
+perimeter = side_ab + side_bc + side_ca
+
+print("Длина стороны AB:", side_ab)
+print("Длина стороны BC:", side_bc)
+print("Длина стороны CA:", side_ca)
+print("Периметр треугольника:", perimeter)
