@@ -1,0 +1,28 @@
+import re
+
+def validate_form(name, email, topics):
+    errors = []
+
+    if not name.strip():
+        errors.append("Введите имя.")
+
+    if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", email):
+        errors.append("Введите корректный e-mail.")
+
+    if not topics:
+        errors.append("Выберите хотя бы одну тему.")
+
+    return errors
+
+name = input("Имя: ")
+email = input("E-mail: ")
+selected = input("Темы: ")
+
+topics = [x.strip() for x in selected.split(",") if x.strip()]
+errors = validate_form(name, email, topics)
+
+if errors:
+    for error in errors:
+        print("Ошибка:", error)
+else:
+    print("Форма успешно отправлена!")
