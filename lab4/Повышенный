@@ -1,1 +1,14 @@
+name = input("Имя: ")
+email = input("E-mail: ")
+address = input("Адрес: ")
+card = input("Карта: ")
+agree = input("Согласие (да/нет): ")
 
+if not name: print("Ошибка: имя")
+if "@" not in email: print("Ошибка: e-mail")
+if not address: print("Ошибка: адрес")
+if len(card) < 16: print("Ошибка: карта")
+if agree != "да": print("Ошибка: согласие")
+
+if name and "@" in email and address and len(card) >= 16 and agree == "да":
+    print("Заказ оформлен")
